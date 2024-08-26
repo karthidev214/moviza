@@ -1,0 +1,127 @@
+.slider {
+    background-color: var(--theme-accent);
+    background-image: url(https://api.iconify.design/svg-spinners:tadpole.svg?color=%23ddff00);
+    background-size: 100px;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+.slider .eachSlide {
+    background-image: linear-gradient(45deg, black, rgba(0, 0, 0, 0.8), transparent), var(--bg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    position: relative;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    color: var(--theme) !important;
+    opacity: 0.3;
+    transition: .3s;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+    opacity: 1;
+}
+
+.info>*:hover {
+    color: var(--theme);
+}
+
+
+
+.rating {
+    height: 20px;
+}
+
+.rating div {
+    position: relative;
+    width: 100px;
+    height: 100%;
+}
+
+.rating div::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: var(--theme);
+    mask-image: url(https://api.iconify.design/material-symbols:star.svg);
+    mask-size: 20px;
+    background-color: white;
+}
+
+.rating div::after {
+    position: absolute;
+    content: "";
+    width: calc(var(--rating) * 20%);
+    height: 100%;
+    left: 0;
+    top: 0;
+    mask-image: url(https://api.iconify.design/material-symbols:star.svg);
+    mask-size: 20px;
+    background-color: var(--theme);
+}
+
+.genre span {
+    outline: 1px solid var(--theme);
+    padding: 5px 10px;
+    border-radius: 100vw;
+}
+
+.genre span:hover {
+    color: var(--theme);
+}
+
+.genre span.active {
+    background-color: var(--theme);
+    color: var(--theme-accent);
+    pointer-events: none;
+}
+
+.swiper-slide .eachSlide>* {
+    transform: translateY(50px);
+    opacity: 0;
+    transition: .3s;
+}
+
+.swiper-slide.swiper-slide-active .eachSlide>* {
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.swiper-slide .eachSlide::after {
+    /* content: ""; */
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 1px;
+    background-color: var(--theme);
+    transition: 10s linear;
+}
+
+.swiper-slide.swiper-slide-active .eachSlide::after {
+    width: 100%;
+}
+
+.swiper-pagination {
+    width: max-content !important;
+    display: flex;
+    left: auto !important;
+    top: 1rem !important;
+    height: max-content;
+    right: 3rem;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.swiper-pagination span {
+    background-color: var(--theme);
+}

@@ -1,0 +1,10 @@
+.seasons {
+    background-color: var(--theme-accent);
+    color: var(--theme-clr);
+}
+
+.seasons.active,
+.seasons:hover {
+    background-color: var(--theme);
+    color: var(--theme-accent);
+}
